@@ -51,7 +51,7 @@ namespace Laba4_Life
             int file_number = 0;
             while (count_of_repetioins <= 5 && count_of_generations-count_of_repetioins+1<10000)
             {
-                if (Console.KeyAvailable)
+                if (!Console.IsInputRedirected && Console.KeyAvailable)
                 {
                     ConsoleKeyInfo name = Console.ReadKey();
                     if (name.KeyChar == 'q') break;
